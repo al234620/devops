@@ -1,5 +1,26 @@
+PROYECTO: MAREA CAFE SYSTEMS
 MODULO: PROMOCIONES API
 
-GET /promociones
-POST /promociones
-PUT /promociones/{id}
+CONTEXTO:
+Marketing necesita lanzar promociones rápidas según temporada.
+
+OBJETIVO:
+Administrar descuentos activos.
+
+REQUERIMIENTOS:
+
+1. GET /promociones
+Mostrar promociones.
+
+2. POST /promociones
+Crear promoción nueva.
+
+3. PUT /promociones/{id}
+Actualizar descuento.
+
+VALIDACIONES:
+- descuento entre 1 y 100
+- nombre obligatorio
+
+ROL PRODUCT OWNER:
+Priorizar impacto en ventas.
