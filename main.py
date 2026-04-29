@@ -1,17 +1,20 @@
 from fastapi import FastAPI
+import csv
+
 app = FastAPI(title="Ventas API")
 
-ventas=[]
+ventas = []
+
+# Leer CSV
 
 @app.get("/ventas")
-def listar():
-    return ventas
+def listar_ventas():
+    pass
 
 @app.post("/ventas")
-def crear(v:dict):
-    ventas.append(v)
-    return {"ok":True}
+def agregar_venta(data: dict):
+    pass
 
 @app.get("/ventas/total")
-def total():
-    return {"total":len(ventas)}
+def total_ventas():
+    pass

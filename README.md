@@ -1,3 +1,6 @@
 # Rama tsp
 
-Proyecto FastAPI correspondiente al equipo tsp.
+Completar lógica de endpoints usando FastAPI y data.csv como base de datos.
+Ejecutar:
+
+uvicorn main:app --reload
