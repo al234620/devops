@@ -1,5 +1,26 @@
+PROYECTO: MAREA CAFE SYSTEMS
 MODULO: REPORTES API
 
-GET /reportes
-GET /metricas
-GET /ventas-dia
+CONTEXTO:
+Gerencia necesita datos rápidos para tomar decisiones estratégicas.
+
+OBJETIVO:
+Consultar métricas de operación y ventas.
+
+REQUERIMIENTOS:
+
+1. GET /reportes
+Resumen general.
+
+2. GET /metricas
+Indicadores clave.
+
+3. GET /ventas-dia
+Ventas por día.
+
+VALIDACIONES:
+- datos consistentes
+- respuesta clara
+
+ROL PRODUCT OWNER:
+Priorizar información útil para dirección.
