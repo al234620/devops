@@ -1,18 +1,20 @@
 from fastapi import FastAPI
+import csv
+
 app = FastAPI(title="Reservaciones API")
 
-reservas=[]
+reservas = []
+
+# Leer CSV
 
 @app.get("/reservas")
-def listar():
-    return reservas
+def listar_reservas():
+    pass
 
 @app.post("/reservas")
-def crear(r:dict):
-    reservas.append(r)
-    return {"ok":True}
+def crear_reserva(data: dict):
+    pass
 
 @app.delete("/reservas/{id}")
-def borrar(id:int):
-    reservas.pop(id)
-    return {"ok":True}
+def eliminar_reserva(id:int):
+    pass
