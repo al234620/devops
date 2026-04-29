@@ -1,5 +1,27 @@
+PROYECTO: MAREA CAFE SYSTEMS
 MODULO: VENTAS API
 
-GET /ventas
-POST /ventas
-GET /ventas/total
+CONTEXTO:
+La administración necesita consultar ventas diarias para conocer
+ingresos reales y tomar decisiones de operación.
+
+OBJETIVO:
+Registrar ventas y calcular totales automáticamente.
+
+REQUERIMIENTOS:
+
+1. GET /ventas
+Mostrar ventas existentes.
+
+2. POST /ventas
+Registrar nueva venta.
+
+3. GET /ventas/total
+Calcular suma total vendida.
+
+VALIDACIONES:
+- total mayor a 0
+- producto obligatorio
+
+ROL PRODUCT OWNER:
+Indicar que este módulo ayuda a medir rentabilidad diaria.
