@@ -1,0 +1,5 @@
+MODULO: VENTAS API
+
+GET /ventas
+POST /ventas
+GET /ventas/total

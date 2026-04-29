@@ -3,18 +3,24 @@ import csv
 
 app = FastAPI(title="Ventas API")
 
-ventas = []
+ventas=[]
 
-# Leer CSV
+with open("data.csv", newline="", encoding="utf-8") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        ventas.append(row)
 
 @app.get("/ventas")
-def listar_ventas():
+def listar():
     pass
 
 @app.post("/ventas")
-def agregar_venta(data: dict):
+def crear(data:dict):
     pass
 
 @app.get("/ventas/total")
-def total_ventas():
-    pass
+def total():
+    suma=0
+    for v in ventas:
+        suma += int(v["totall"])
+    return {"total":suma}
