@@ -1,0 +1,5 @@
+MODULO: PROMOCIONES API
+
+GET /promociones
+POST /promociones
+PUT /promociones/{id}
