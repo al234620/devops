@@ -1,18 +1,20 @@
 from fastapi import FastAPI
+import csv
+
 app = FastAPI(title="Promociones API")
 
-promos=[]
+promos = []
+
+# Leer CSV
 
 @app.get("/promociones")
-def listar():
-    return promos
+def listar_promos():
+    pass
 
 @app.post("/promociones")
-def crear(p:dict):
-    promos.append(p)
-    return {"ok":True}
+def agregar_promo(data: dict):
+    pass
 
 @app.put("/promociones/{id}")
-def editar(id:int,data:dict):
-    promos[id]=data
-    return {"ok":True}
+def editar_promo(id:int,data:dict):
+    pass
