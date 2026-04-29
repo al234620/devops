@@ -1,0 +1,5 @@
+MODULO: EMPLEADOS API
+
+GET /empleados
+POST /empleados
+PUT /empleados/{id}
