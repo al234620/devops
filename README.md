@@ -1,2 +1,3 @@
-# devops
-Práctica universitaria de metodología DevOps con métricas DORA
+# Rama das
+
+Proyecto FastAPI correspondiente al equipo das.
