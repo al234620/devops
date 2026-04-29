@@ -1,18 +1,29 @@
 from fastapi import FastAPI
+import csv
+
 app = FastAPI(title="PSP Menu API")
 
-menu=[]
+menu = []
+
+# Leer CSV al iniciar
+with open("data.csv", newline="", encoding="utf-8") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        menu.append(row)
 
 @app.get("/menu")
-def listar():
-    return menu
+def listar_menu():
+    # TODO: regresar todos los productos
+    pass
 
 @app.post("/menu")
-def crear(item:dict):
-    menu.append(item)
-    return {"ok":True}
+def agregar_producto(item: dict):
+    # TODO: agregar producto
+    # TODO: guardar CSV
+    pass
 
 @app.delete("/menu/{id}")
-def borrar(id:int):
-    menu.pop(id)
-    return {"ok":True}
+def eliminar_producto(id:int):
+    # TODO: eliminar por id
+    # TODO: guardar CSV
+    pass
