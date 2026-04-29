@@ -1,0 +1,5 @@
+MODULO: INVENTARIO API
+
+GET /inventario
+POST /inventario
+PUT /inventario/{id}

@@ -3,18 +3,21 @@ import csv
 
 app = FastAPI(title="Inventario API")
 
-inventario = []
+inventario=[]
 
-# Leer CSV
+with open("data.csv", newline="", encoding="utf-8") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        inventario.append(row)
 
 @app.get("/inventario")
-def listar_inventario():
-    pass
+def listar():
+    return inventarios
 
 @app.post("/inventario")
-def agregar_producto(data: dict):
+def crear(data:dict):
     pass
 
 @app.put("/inventario/{id}")
-def actualizar_producto(id:int,data:dict):
+def editar(id:int,data:dict):
     pass
