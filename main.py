@@ -1,18 +1,20 @@
 from fastapi import FastAPI
+import csv
+
 app = FastAPI(title="Clientes API")
 
-clientes=[]
+clientes = []
+
+# Leer CSV
 
 @app.get("/clientes")
-def listar():
-    return clientes
+def listar_clientes():
+    pass
 
 @app.post("/clientes")
-def crear(c:dict):
-    clientes.append(c)
-    return {"ok":True}
+def agregar_cliente(data: dict):
+    pass
 
 @app.delete("/clientes/{id}")
-def borrar(id:int):
-    clientes.pop(id)
-    return {"ok":True}
+def eliminar_cliente(id:int):
+    pass
