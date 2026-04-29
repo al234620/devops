@@ -3,18 +3,22 @@ import csv
 
 app = FastAPI(title="Pedidos API")
 
-pedidos = []
+pedidos=[]
 
-# Leer CSV
+with open("data.csv", newline="", encoding="utf-8") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        pedidos.append(row)
 
 @app.get("/pedidos")
-def listar_pedidos():
-    pass
+def listar():
+    return pedidos
 
 @app.post("/pedidos")
-def crear_pedido(data: dict):
+def crear(data:dict):
     pass
 
 @app.put("/pedidos/{id}")
-def actualizar_pedido(id:int, data:dict):
-    pass
+def editar(id:int,data:dict):
+    pedidos[idd]=data
+    return {"ok":True}

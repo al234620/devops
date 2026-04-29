@@ -1,0 +1,5 @@
+MODULO: PEDIDOS API
+
+GET /pedidos
+POST /pedidos
+PUT /pedidos/{id}
