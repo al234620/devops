@@ -1,5 +1,27 @@
+PROYECTO: MAREA CAFE SYSTEMS
 MODULO: INVENTARIO API
 
-GET /inventario
-POST /inventario
-PUT /inventario/{id}
+CONTEXTO:
+Se pierde dinero por falta de control de insumos.
+A veces se vende producto sin existencia.
+
+OBJETIVO:
+Controlar cantidades disponibles.
+
+REQUERIMIENTOS:
+
+1. GET /inventario
+Mostrar inventario.
+
+2. POST /inventario
+Agregar nuevo insumo.
+
+3. PUT /inventario/{id}
+Actualizar cantidades.
+
+VALIDACIONES:
+- cantidad no negativa
+- nombre obligatorio
+
+ROL PRODUCT OWNER:
+Explicar que sin inventario correcto no hay operación.
