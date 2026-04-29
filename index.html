@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps Challenge - Métricas DORA</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Consolas, monospace;
+}
+
+body{
+    background:#050505;
+    color:#00ff88;
+    padding:30px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    text-align:center;
+    padding:40px;
+    border:2px solid #00ff88;
+    margin-bottom:30px;
+    box-shadow:0 0 25px #00ff88;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+    text-shadow:0 0 10px #00ff88;
+}
+
+header p{
+    color:#9dffcb;
+}
+
+.card{
+    background:#0d0d0d;
+    border:1px solid #00ff88;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:10px;
+    box-shadow:0 0 12px rgba(0,255,136,.3);
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#00ffaa;
+}
+
+ul{
+    margin-left:25px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.metric{
+    background:#111;
+    border:1px solid #00ff88;
+    padding:20px;
+    border-radius:10px;
+}
+
+.metric h3{
+    margin-bottom:10px;
+    color:#00ffee;
+}
+
+.team{
+    background:#111;
+    padding:15px;
+    border-left:4px solid #00ff88;
+}
+
+footer{
+    text-align:center;
+    margin-top:40px;
+    color:#66ffbb;
+}
+
+.code{
+    background:#000;
+    padding:15px;
+    border:1px dashed #00ff88;
+    margin-top:15px;
+    white-space:pre-line;
+    color:#00ff88;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<h1> DEVOPS CHALLENGE</h1>
+<p>Práctica de Métricas de Software</p>
+</header>
+
+<section class="card">
+<h2> Contexto</h2>
+<p>
+La empresa tecnológica <strong>Marea Café Systems</strong> necesita modernizar su plataforma de software.
+Actualmente los despliegues son manuales, existen errores frecuentes y no se mide el rendimiento del proceso.
+Cada equipo será responsable de un módulo del sistema y deberá aplicar prácticas DevOps.
+</p>
+</section>
+
+<section class="card">
+<h2> Objetivo</h2>
+<p>
+Implementar un flujo DevOps funcional y medir el desempeño del equipo utilizando métricas oficiales DORA.
+</p>
+</section>
+
+<section class="card">
+<h2> Equipos</h2>
+
+<div class="grid">
+<div class="team">Equipo (PSP)- Menú API</div>
+<div class="team">Equipo (TSP) - Ventas API</div>
+<div class="team">Equipo (SCRUM) - Pedidos API</div>
+<div class="team">Equipo (XP) - Inventario API</div>
+<div class="team">Equipo (DAS) - Clientes API</div>
+<div class="team">Equipo (MLOPS) - Reportes API</div>
+<div class="team">Equipo (LSD) - Empleados API</div>
+<div class="team">Equipo (KANBAN) - Reservaciones API</div>
+<div class="team">Equipo (DDC) - Promociones API</div>
+</div>
+</section>
+
+<section class="card">
+<h2> Flujo DevOps</h2>
+
+<ul>
+<li>F1 - Planificación del sprint</li>
+<li>F2 - Desarrollo del módulo asignado</li>
+<li>F3 - Commit y versionado en Git</li>
+<li>F4 - Build automático</li>
+<li>F5 - Testing del sistema</li>
+<li>F6 - Deploy local</li>
+<li>F7 - Monitoreo</li>
+<li>F8 - Medición de métricas DORA</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Métricas DORA a medir</h2>
+
+<div class="grid">
+
+<div class="metric">
+<h3>Deployment Frequency</h3>
+<p>Cuántas veces el equipo despliega cambios exitosamente.</p>
+</div>
+
+<div class="metric">
+<h3>Change Failure Rate</h3>
+<p>Porcentaje de despliegues que fallan o generan errores.</p>
+</div>
+
+<div class="metric">
+<h3>Tasa de Errores por Modificación</h3>
+<p>Cantidad de bugs detectados después de cada cambio.</p>
+</div>
+
+<div class="metric">
+<h3>Tiempo de Recuperación</h3>
+<p>Tiempo necesario para restaurar el sistema tras un despliegue fallido.</p>
+</div>
+
+</div>
+
+<div style="text-align:center; margin-top:30px;">
+<a href="https://docs.google.com/spreadsheets/d/1hmA1dFPqid_BU2Bqj0CNQ9vJyYKNMmtCL3QLwrKernU/edit?usp=sharing" target="_blank" 
+style="
+display:inline-block;
+padding:15px 30px;
+background:#00ff88;
+color:#000;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+box-shadow:0 0 15px #00ff88;
+transition:0.3s;
+">
+Registrar Métricas en Google Sheets
+</a>
+</div>
+
+</section>
+
+<section class="card">
+<h2>Entregables</h2>
+
+<ul>
+<li>Código funcional del módulo</li>
+<li>Reporte de métricas DORA</li>
+</ul>
+
+</section>
+
+<section class="card">
+<h2> Comandos Base</h2>
+
+<div class="code">
+git clone repositorio.git
+git checkout equipo-N
+git add .
+git commit -m "feat: modulo terminado"
+git push origin equipo-N
+</div>
+
+
+</section>
+
+<footer>
+Automatiza el proceso, acelera la entrega, mejora sin detenerte
+</footer>
+
+</div>
+</body>
+</html>
