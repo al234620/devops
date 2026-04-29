@@ -1,3 +1,6 @@
 # Rama xp
 
-Proyecto FastAPI correspondiente al equipo xp.
+Completar lógica de endpoints usando FastAPI y data.csv como base de datos.
+Ejecutar:
+
+uvicorn main:app --reload
