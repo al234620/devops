@@ -1,5 +1,26 @@
+PROYECTO: MAREA CAFE SYSTEMS
 MODULO: CLIENTES API
 
-GET /clientes
-POST /clientes
-DELETE /clientes/{id}
+CONTEXTO:
+La empresa desea fidelizar clientes frecuentes mediante puntos y promociones.
+
+OBJETIVO:
+Administrar clientes registrados.
+
+REQUERIMIENTOS:
+
+1. GET /clientes
+Mostrar clientes.
+
+2. POST /clientes
+Registrar cliente nuevo.
+
+3. DELETE /clientes/{id}
+Eliminar registros duplicados o inactivos.
+
+VALIDACIONES:
+- nombre obligatorio
+- puntos iniciales válidos
+
+ROL PRODUCT OWNER:
+Indicar enfoque en experiencia del cliente.
