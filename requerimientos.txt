@@ -1,5 +1,26 @@
-MODULO: RESERVAS API
+PROYECTO: MAREA CAFE SYSTEMS
+MODULO: RESERVACIONES API
 
-GET /reservas
-POST /reservas
-DELETE /reservas/{id}
+CONTEXTO:
+Clientes desean reservar mesa en horarios pico y evitar filas.
+
+OBJETIVO:
+Administrar reservaciones.
+
+REQUERIMIENTOS:
+
+1. GET /reservas
+Mostrar reservaciones activas.
+
+2. POST /reservas
+Crear nueva reservación.
+
+3. DELETE /reservas/{id}
+Cancelar reservación.
+
+VALIDACIONES:
+- mesa válida
+- nombre obligatorio
+
+ROL PRODUCT OWNER:
+Enfocarse en experiencia del cliente.
