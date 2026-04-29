@@ -1,0 +1,5 @@
+MODULO: CLIENTES API
+
+GET /clientes
+POST /clientes
+DELETE /clientes/{id}
