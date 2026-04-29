@@ -1,2 +1,3 @@
-# devops
-Práctica universitaria de metodología DevOps con métricas DORA
+# Rama kanban
+
+Proyecto FastAPI correspondiente al equipo kanban.
