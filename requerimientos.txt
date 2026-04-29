@@ -1,5 +1,26 @@
+PROYECTO: MAREA CAFE SYSTEMS
 MODULO: EMPLEADOS API
 
-GET /empleados
-POST /empleados
-PUT /empleados/{id}
+CONTEXTO:
+Recursos humanos necesita control básico del personal operativo.
+
+OBJETIVO:
+Registrar empleados y puestos.
+
+REQUERIMIENTOS:
+
+1. GET /empleados
+Mostrar personal.
+
+2. POST /empleados
+Agregar empleado.
+
+3. PUT /empleados/{id}
+Actualizar puesto o datos.
+
+VALIDACIONES:
+- nombre obligatorio
+- puesto obligatorio
+
+ROL PRODUCT OWNER:
+Explicar importancia de organización interna.
