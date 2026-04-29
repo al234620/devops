@@ -1,13 +1,31 @@
+PROYECTO: MAREA CAFE SYSTEMS
 MODULO: MENU API
 
-Endpoints requeridos:
+CONTEXTO:
+La cafetería necesita digitalizar su menú para mostrar productos disponibles
+en kioscos, tablets y sistema interno de caja. Actualmente el menú se actualiza
+manual y esto provoca errores en precios y productos agotados.
 
-GET /menu
-POST /menu
-DELETE /menu/{id}
+OBJETIVO DEL NEGOCIO:
+Permitir administrar productos del menú de forma rápida y segura.
 
-Developer:
-Completar endpoints pendientes.
+REQUERIMIENTOS:
 
-QA:
-Validar funcionamiento total del modulo.
+1. GET /menu
+Debe mostrar todos los productos registrados.
+
+2. POST /menu
+Debe permitir agregar un nuevo producto con:
+id, nombre, precio.
+
+3. DELETE /menu/{id}
+Debe eliminar productos que ya no estén disponibles.
+
+VALIDACIONES:
+- precio mayor a 0
+- id no repetido
+- nombre obligatorio
+
+ROL PRODUCT OWNER:
+Explicar al Developer la prioridad del módulo:
+el menú impacta ventas directas.
