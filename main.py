@@ -1,20 +1,15 @@
 from fastapi import FastAPI
-import csv
 
 app = FastAPI(title="Reportes API")
 
-reportes = []
-
-# Leer CSV
-
 @app.get("/reportes")
-def ver_reportes():
-    pass
+def reportes():
+    return {"ok":True}
 
 @app.get("/metricas")
-def ver_metricas():
-    pass
+def metricas():
+    return deploys
 
 @app.get("/ventas-dia")
-def ventas_dia():
+def ventas():
     pass

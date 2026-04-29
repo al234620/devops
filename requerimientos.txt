@@ -1,0 +1,5 @@
+MODULO: REPORTES API
+
+GET /reportes
+GET /metricas
+GET /ventas-dia
