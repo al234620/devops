@@ -1,18 +1,20 @@
 from fastapi import FastAPI
+import csv
+
 app = FastAPI(title="Empleados API")
 
-empleados=[]
+empleados = []
+
+# Leer CSV
 
 @app.get("/empleados")
-def listar():
-    return empleados
+def listar_empleados():
+    pass
 
 @app.post("/empleados")
-def crear(e:dict):
-    empleados.append(e)
-    return {"ok":True}
+def agregar_empleado(data: dict):
+    pass
 
 @app.put("/empleados/{id}")
-def editar(id:int,data:dict):
-    empleados[id]=data
-    return {"ok":True}
+def editar_empleado(id:int,data:dict):
+    pass

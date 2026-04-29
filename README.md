@@ -1,3 +1,6 @@
 # Rama lsd
 
-Proyecto FastAPI correspondiente al equipo lsd.
+Completar lógica de endpoints usando FastAPI y data.csv como base de datos.
+Ejecutar:
+
+uvicorn main:app --reload
