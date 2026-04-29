@@ -1,5 +1,28 @@
+PROYECTO: MAREA CAFE SYSTEMS
 MODULO: PEDIDOS API
 
-GET /pedidos
-POST /pedidos
-PUT /pedidos/{id}
+CONTEXTO:
+Los pedidos tardan demasiado porque no existe seguimiento digital.
+Cocina y caja no saben en qué estado va cada orden.
+
+OBJETIVO:
+Gestionar pedidos y su avance.
+
+REQUERIMIENTOS:
+
+1. GET /pedidos
+Mostrar pedidos actuales.
+
+2. POST /pedidos
+Crear nuevo pedido.
+
+3. PUT /pedidos/{id}
+Actualizar estado:
+Pendiente / Proceso / Entregado
+
+VALIDACIONES:
+- cliente obligatorio
+- estado válido
+
+ROL PRODUCT OWNER:
+Priorizar velocidad y trazabilidad del pedido.
