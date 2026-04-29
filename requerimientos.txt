@@ -1,0 +1,13 @@
+MODULO: MENU API
+
+Endpoints requeridos:
+
+GET /menu
+POST /menu
+DELETE /menu/{id}
+
+Developer:
+Completar endpoints pendientes.
+
+QA:
+Validar funcionamiento total del modulo.
