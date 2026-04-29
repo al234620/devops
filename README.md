@@ -1,2 +1,3 @@
-# devops
-Práctica universitaria de metodología DevOps con métricas DORA
+# Rama lsd
+
+Proyecto FastAPI correspondiente al equipo lsd.
