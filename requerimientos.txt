@@ -1,0 +1,5 @@
+MODULO: RESERVAS API
+
+GET /reservas
+POST /reservas
+DELETE /reservas/{id}
