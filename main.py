@@ -1,14 +1,25 @@
 from fastapi import FastAPI
 import csv
+import os
 
 app = FastAPI(title="Clientes API")
 
 clientes=[]
 
-with open("data.csv", newline="", encoding="utf-8") as file:
-    reader = csv.DictReader(file)
-    for row in reader:
-        clientes.append(row)
+if os.path.exists("data.csv"):
+    with open("data.csv", newline="", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            clientes.append({
+                "id": int(row["id"]),
+                "nombre": row["nombre"],
+                "puntos": int(row["puntos"])
+            })
+
+@app.get("/clientes")
+def listar():
+    return clientes
+
 
 @app.get("/clientes")
 def listar():
