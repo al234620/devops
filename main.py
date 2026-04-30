@@ -40,3 +40,8 @@ def metricas():
         "mejor_dia": mejor_dia,
         "peor_dia": peor_dia,
     }
+
+@app.get("/ventas-dia", summary="Ventas por día de la semana")
+def ventas_dia():
+    ventas = leer_ventas_csv()
+    return {"ventas_por_dia": ventas}
