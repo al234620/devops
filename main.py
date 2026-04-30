@@ -2,6 +2,8 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, field_validator
 from datetime import datetime
+import csv
+import os
  
 app = FastAPI(title="Reservas API")
  
@@ -17,7 +19,31 @@ reservas: dict[int, dict] = {}
 counter = 1
  
 MESAS_VALIDAS = {1, 2, 3, 4, 5}
+
+def cargar_csv(ruta: str = "data.csv"):
+    """Precarga las reservas desde el CSV al iniciar el servidor."""
+    global counter
+    if not os.path.exists(ruta):
+        print(f"[INFO] No se encontró {ruta}, se inicia con base de datos vacía.")
+        return
+    with open(ruta, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            rid = int(row["id"])
+            reservas[rid] = {
+                "id": rid,
+                "nombre": row["nombre"].strip(),
+                "mesa": int(row["mesa"]),
+                "creada_en": datetime.utcnow().isoformat(),
+            }
+            if rid >= counter:
+                counter = rid + 1
+    print(f"[INFO] {len(reservas)} reserva(s) cargadas desde {ruta}.")
  
+ 
+# Cargar datos al iniciar
+cargar_csv()
+
  
 class ReservaIn(BaseModel):
     nombre: str
