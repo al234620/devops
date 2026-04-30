@@ -11,6 +11,8 @@ def leer_promociones():
     with open(DATA_FILE, "r", newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
+            if not row.get("id") or not row.get("nombre"):
+                continue
             row["id"] = int(row["id"])
             row["descuento"] = int(row["descuento"])
             promociones.append(row)
