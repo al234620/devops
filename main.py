@@ -17,8 +17,13 @@ def listar():
 
 
 @app.post("/ventas")
-def crear(data:dict):
-    pass
+def crear(data: dict):
+    ventas.append(data)
+    with open("data.csv", "a", newline="", encoding="utf-8") as file:
+        writer = csv.DictWriter(file, fieldnames=data.keys())
+        writer.writerow(data)
+    
+    return {"mensaje": "Venta registrada y guardada en CSV", "venta": data}
 
 @app.get("/ventas/total")
 def total():
