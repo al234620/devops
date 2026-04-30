@@ -14,6 +14,8 @@ with open("data.csv", newline="", encoding="utf-8") as file:
 def listar():
     return {"total": len(ventas), "datos": ventas}
 
+
+
 @app.post("/ventas")
 def crear(data:dict):
     pass
