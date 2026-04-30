@@ -12,7 +12,7 @@ with open("data.csv", newline="", encoding="utf-8") as file:
 
 @app.get("/ventas")
 def listar():
-    pass
+    return {"total": len(ventas), "datos": ventas}
 
 @app.post("/ventas")
 def crear(data:dict):
@@ -22,5 +22,5 @@ def crear(data:dict):
 def total():
     suma=0
     for v in ventas:
-        suma += int(v["totall"])
+        suma += int(v["total"])
     return {"total":suma}
