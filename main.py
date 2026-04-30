@@ -47,6 +47,17 @@ def crear(data: ClienteIn):
     return nuevo_cliente
 
 @app.delete("/clientes/{id}")
-def borrar(id:int):
-    clientes.pop(ids)
-    return {"ok":True}
+def borrar(id: int):
+    for i, cliente in enumerate(clientes):
+        if cliente["id"] == id:
+            clientes.pop(i)
+
+            # Reescribir el CSV sin el cliente eliminado
+            with open("data.csv", "w", newline="", encoding="utf-8") as file:
+                writer = csv.DictWriter(file, fieldnames=["id", "nombre", "puntos"])
+                writer.writeheader()
+                writer.writerows(clientes)
+
+            return {"ok": True, "mensaje": f"Cliente {id} eliminado"}
+
+    raise HTTPException(status_code=404, detail=f"Cliente con id {id} no encontrado")
