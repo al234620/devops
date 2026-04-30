@@ -77,9 +77,21 @@ def crear(data:ReservaIn):
             detail=(
                 f"La mesa {data.mesa} ya está reservadael {data.fecha} "
                 f"de {conflicto['hora']} por {conflicto['nombre']}."
-            )
+            ),
         )
+    nueva = {
+        "id":counter,
+        **data.model_dump(),
+        "creada_en":datetime.utcnow().isoformat(),
+    }
+    reservas[counter]=nueva
+    counter+=1
+    return nueva
 
 @app.delete("/reservas/{id}")
 def borrar(id:int):
-    return mesa[id]
+    if id not in reservas:
+        raise HTTPException(status_code=404, detail=f"Reserva {id} no encontrada.")
+    eliminada = reservas.pop(id)
+    #return mesa[id]
+    return eliminada
