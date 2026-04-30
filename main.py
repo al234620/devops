@@ -22,5 +22,5 @@ def crear(data:dict):
 def total():
     suma=0
     for v in ventas:
-        suma += int(v["totall"])
+        suma += int(v["total"])
     return {"total":suma}
