@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
@@ -57,8 +57,28 @@ def listar():
     return sorted(reservas.values(),key=lambda r: (r["fecha"], r["hora"]))
 
 @app.post("/reservas")
-def crear(data:dict):
-    pass
+def crear(data:ReservaIn):
+    global counter
+    
+    for r in reservas.values():
+        if (
+            r["nombre"].lower() == data.nombre.lower() 
+            and r["fecha"] == data.fecha
+            and r["hora"] == data.hora
+        ):
+            raise HTTPException(
+                status_code = 409,
+                detail = f"Ya existe una reserva para '{data.nombre}' el {data.fecha} a las {data.hora}."
+            )
+    conflicto = hay_empalme(data)
+    if conflicto:
+        raise HTTPException(
+            status_code=409,
+            detail=(
+                f"La mesa {data.mesa} ya está reservadael {data.fecha} "
+                f"de {conflicto['hora']} por {conflicto['nombre']}."
+            )
+        )
 
 @app.delete("/reservas/{id}")
 def borrar(id:int):
